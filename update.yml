@@ -1,0 +1,11 @@
+# Run apt-get update && apt-get upgrade on the remote machines
+- hosts: all
+  become: true
+  become_method: sudo
+  tasks:
+    - name: Update
+      ansible.builtin.apt:
+        update_cache: yes
+    - name: Upgrade
+      ansible.builtin.apt:
+        upgrade: yes

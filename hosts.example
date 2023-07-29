@@ -1,0 +1,2 @@
+[all]
+10.0.0.1 ansible_user="username" ansible_become_pass="sudoPassword"
